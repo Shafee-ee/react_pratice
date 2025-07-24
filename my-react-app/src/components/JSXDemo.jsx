@@ -6,6 +6,8 @@ const JSXDemo = (props) => {
         <div>
             <h2>Hello,{props.name}</h2>
             <p>Your lucky Number is {props.luckyNumber}</p>
+            <p>You are current {props.weight} kg</p>
+
             <h2>This is the JSX Demo Component</h2>
         </div>
     )
