@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { useUser } from './UserContext';
 
-const UserFrom = ({ name, setName, age, setAge }) => {
+const UserForm = () => {
+    const { name, setName, age, setAge } = useUser();
+
     return (
         <div>
             <input type="text"
@@ -16,4 +19,4 @@ const UserFrom = ({ name, setName, age, setAge }) => {
     )
 }
 
-export default UserFrom
+export default UserForm

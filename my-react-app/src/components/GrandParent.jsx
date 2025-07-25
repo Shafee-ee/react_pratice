@@ -1,19 +1,21 @@
 import { useState } from 'react';
+import { UserContext } from './UserContext';
 import UserForm from './UserForm';
 import Greeting from './Greeting';
 import BirthdayMessage from './BirthdayMessage';
 
 const GrandParent = () => {
     const [name, setName] = useState('');
-    const [age, setAge] = useState('');
+    const [age, setAge] = useState(0);
 
     return (
         <div>
-            <h2>GrandParent state Management</h2>
-
-            <UserForm name={name} setName={setName} age={age} setAge={setAge} />
-            <Greeting name={name} />
-            <BirthdayMessage age={age} />
+            <UserContext.Provider value={{ name, setName, age, setAge }}>
+                <h2>GrandParent state Management</h2>
+                <UserForm />
+                <Greeting />
+                <BirthdayMessage />
+            </UserContext.Provider>
         </div>
     )
 

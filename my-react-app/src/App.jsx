@@ -9,6 +9,7 @@ import SiblingDemo from './components/SiblingDemo';
 import './App.css'
 import GrandParent from './components/GrandParent';
 
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
@@ -23,6 +24,7 @@ function App() {
         <Link to="/controlledInputs" elements={<SimpleControlledInputs />}><button>Controlled inputs</button></Link>
         <Link to="/miniForm" element={<MiniForms />}><button>Mini-Form</button></Link>
         <Link to="/SiblingDemo" element={<SiblingDemo />}><button>Sibling Demo</button></Link>
+        <Link to="/grandParent" element={<GrandParent />}><button>GrandParent</button></Link >
         <Link to="/grandParent" element={<GrandParent />}><button>GrandParent</button></Link >
 
       </nav>

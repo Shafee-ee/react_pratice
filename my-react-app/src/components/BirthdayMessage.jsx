@@ -1,6 +1,11 @@
 import React from 'react'
+import { useUser } from './UserContext';
 
-const BirthdayMessage = ({ age }) => {
+
+
+const BirthdayMessage = () => {
+    const { name, setName, age, setAge } = useUser();
+
     return (
         <div>
             {age ?
