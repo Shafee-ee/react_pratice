@@ -17,6 +17,8 @@ const UserForm = () => {
                 onChange={(e) => setAge(Number(e.target.value))} />
         </div>
     )
+
+    console.log("This works")
 }
 
 export default UserForm
